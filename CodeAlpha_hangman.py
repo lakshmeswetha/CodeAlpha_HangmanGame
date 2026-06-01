@@ -27,14 +27,14 @@ def hangman():
 
         # Check win condition
         if all(letter in guessed_letters for letter in word):
-            print(f"\n🎉 You won! The word was: {word}")
+            print(f"\n You won! The word was: {word}")
             return
 
         # Get player input
         guess = input("\nEnter a letter: ").strip().lower()
 
         if len(guess) != 1 or not guess.isalpha():
-            print("❌ Please enter a single letter.")
+            print(" Please enter a single letter.")
             continue
 
         if guess in guessed_letters:
@@ -50,7 +50,7 @@ def hangman():
             print(f"'{guess}' is NOT in the word.")
 
     # Game over
-    print(f"\n💀 Game over! You ran out of guesses. The word was: '{word}'")
+    print(f"\n Game over! You ran out of guesses. The word was: '{word}'")
 
 if __name__ == "__main__":
     while True:
